@@ -8,3 +8,10 @@ from sklearn.linear_model import LogisticRegression
 import streamlit as st
 
 df=pd.read_csv('C:/Users/Clara/apps2/formula-one-project/Formula-one-project/data/raw/Formula1data.csv')
+print(df)
+
+df.drop(columns='Unnamed: 0',axis=1,inplace=True)
+
+df.select_dtypes(include='object')
+df.select_dtypes(exclude='object').columns
+
